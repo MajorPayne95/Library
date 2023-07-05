@@ -1,0 +1,59 @@
+* {
+  max-height: 100vh;
+  margin: 0;
+}
+/* Styling to make form appear/disappear */
+.form {
+ opacity: 0;
+ z-index: -1;
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ text-align: left;
+ height: 300px;
+ width: auto;
+ border: solid;
+ padding: 10px 20px;
+ margin: 10px;
+ background-color: lightgrey;
+ border-radius: 15px
+}
+
+.form.open {
+ opacity: 1;
+ z-index: 9999;
+}
+
+/*-------------*/
+.buttonZone {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ border-bottom: solid blue;
+ background-color: silver;
+ padding: 20px;
+}
+
+.openForm {
+ height: 50px;
+ width: 200px;
+ border-radius: 30px;
+ font-size: 25px;
+ background-color: white;
+ cursor: pointer;
+}
+
+.bookshelf {
+ display: grid;
+ grid-template-columns: 1fr 1fr
+}
+
+.bookshelf div {
+ border: solid black;
+ height: 100px;
+ width: 200px;
+ display: flex;
+ justify-content: left;
+ align-items: center;
+}

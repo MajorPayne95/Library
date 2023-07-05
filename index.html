@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+    <title>Librray</title>
+</head>
+<body>
+  <div class="buttonZone">
+    <h1>Digital Library</h1>
+    <input type="submit" id="openForm" class="openForm" value="Add Book"></input>
+    <form class="form" id="form" action="./script.js">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" placeholder="Enter book title" required>
+      <label for="title">Author</label>
+      <input type="text" id="author" name="author" placeholder="Enter author name" required>
+      <label for="title">Page Count</label>
+      <input type="text" id="pages" name="pages" placeholder="Total number of pages" required>
+      <label for="title">Status</label>
+      <input type="text" id="status" name="status" placeholder="Enter read/unread" required>
+      <button id="closeForm">Submit</button>
+      <input type="reset">
+    </form>
+  </div>
+  <div class="bookshelf">
+    
+  </div>
+  
+</body>
+
+</html>
