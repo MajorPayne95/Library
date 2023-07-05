@@ -30,6 +30,7 @@ function bookElements(book) {
   bookPages(book);
   bookStatus(book);
   removeBtn(book);
+  statusToggle(book);
 }
 
 function bookDiv(book) {
@@ -86,6 +87,15 @@ function removeBtn(book) {
   document.querySelector('.book' + count).appendChild(removeBook);
 }
 
+let readUnread = document.createElement('button');
+
+function statusToggle(book) {
+  let count = book.position;
+  readUnread.innerText = 'Read';
+  readUnread.className = ('statusToggle')
+  document.querySelector('.book' + count).appendChild(readUnread);
+}
+
 const divElement = document.querySelector(".bookshelf");
 divElement.addEventListener('click', deleteBook);
 
@@ -99,26 +109,21 @@ function deleteBook(e) {
   }
 }
 
-// When delete button is pressed
-// Sort through myLibrary to find object with that position
-// Remove that position object from myLibrary
-// Copy myLibrary into dummy array
-// Set myLibrary to an empty array myLibrary = []
-// loop through dummy array and put each object through addBookToLibrary
+divElement.addEventListener('click', changeStatus);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+function changeStatus(e) {
+  if(!e.target.classList.contains('statusToggle')) {
+    return;
+  }
+  
+  if (readUnread.innerText == "Read") {
+    readUnread.innerText = "Unread"
+    return;
+  } else if (readUnread.innerText == "Unread") {
+    readUnread.innerText = "Read"
+    return;
+  }
+}
 
 // Functionality to form button for submitting info
 const openBtn = document.getElementById("openForm");
@@ -135,6 +140,6 @@ openBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
   form.classList.remove("open");
-  //console.log(form.value)
+  console.log("clicked!")
   addBookToLibrary();
 })
