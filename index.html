@@ -14,14 +14,19 @@
     <input type="submit" id="openForm" class="openForm" value="Add Book"></input>
     <form class="form" id="form" action="./script.js">
       <label for="title">Title</label>
-      <input type="text" id="title" name="title" placeholder="Enter book title" required>
-      <label for="title">Author</label>
-      <input type="text" id="author" name="author" placeholder="Enter author name" required>
-      <label for="title">Page Count</label>
-      <input type="text" id="pages" name="pages" placeholder="Total number of pages" required>
-      <label for="title">Status</label>
-      <input type="text" id="status" name="status" placeholder="Enter read/unread" required>
-      <button id="closeForm">Submit</button>
+      <input type="text" maxlength="20" id="title" name="title" placeholder="Enter book title" required>
+      <label for="author">Author</label>
+      <input type="text" maxlength="20" id="author" name="author" placeholder="Enter author name" required>
+      <label for="pages">Page Count</label>
+      <input type="number" id="pages" name="pages" placeholder="Total number of pages" required>
+      Have you read this book?
+      <div class="radio" id="choices">
+        <label for="read">Yes</label>
+        <input type="radio" name="answer" id="read" value="Read" required>
+        <label for="unread">No</label>
+        <input type="radio" name="answer" id="unread" value="Unread" required>
+      </div>
+      <input type="reset" id="closeForm" value="Submit"></input>
       <input type="reset">
     </form>
   </div>
@@ -30,5 +35,6 @@
   </div>
   
 </body>
+
 
 </html>
